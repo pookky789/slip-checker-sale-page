@@ -1,11 +1,10 @@
-
 export default function HomePage() {
   return (
     <div>
       {/* ✅ Top Bar */}
-      <header className="bg-blue-800 text-white p-4 shadow-md">
-        <nav className="max-w-6xl mx-auto flex justify-between items-center">
-          <h1 className="text-2xl font-extrabold tracking-wide">SlipChecker</h1>
+      <header className="bg-blue-800 text-white p-4 shadow-md h-16">
+        <nav className="max-w-6xl mx-auto flex justify-between items-center h-full">
+          <img src="/header-logo.png" alt="SlipChecker Logo" className="h-full w-auto" />
           <ul className="flex gap-6 text-sm font-medium">
             <li><a href="#benefits" className="hover:underline text-gray-200">ประโยชน์</a></li>
             <li><a href="#packages" className="hover:underline text-gray-200">แพ็กเกจ</a></li>
@@ -57,7 +56,7 @@ export default function HomePage() {
       </section>
 
       {/* ✅ Section 3: การใช้งานง่าย */}
-      <section id="howto" className="py-16 bg-gray-100 text-center">
+      <section id="howto" className="py-16 bg-white text-center">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold text-blue-800 mb-6">ใช้งานง่ายใน 3 ขั้นตอน</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
@@ -67,6 +66,36 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ✅ Section 4: การใช้งาน API ที่ง่าย */}
+<section id="api" className="py-16 bg-gray-100 text-center">
+  <div className="max-w-4xl mx-auto">
+    <h2 className="text-4xl font-bold text-blue-800 mb-6">ใช้งาน API ได้ง่ายสุดๆ</h2>
+    <p className="text-lg text-gray-700 mb-8">
+      เราออกแบบ API ให้เรียบง่าย รองรับทั้งระบบ POS, เว็บ, และแอปมือถือ
+    </p>
+
+    <div className="bg-gray-600 rounded-lg p-6 text-left font-mono text-sm overflow-x-auto shadow">
+      <p className="mb-2 text-gray-400 font-semibold">🔗 ตัวอย่าง:</p>
+      <pre>
+{`POST https://api.slipchecker.com/verify
+
+Headers:
+  Authorization: Bearer YOUR_API_KEY
+
+Body:
+  {
+    "imageUrl": "https://example.com/slip.jpg"
+  }`}
+      </pre>
+    </div>
+
+    <p className="mt-6 text-gray-600">
+      ตอบกลับภายใน <strong className="text-blue-600">1-2 วินาที</strong> พร้อมข้อมูลการตรวจสอบแบบละเอียด
+    </p>
+  </div>
+</section>
+
 
       {/* ✅ Footer */}
       <footer className="bg-blue-800 text-white text-center py-6 mt-10">
