@@ -6,12 +6,12 @@ export default function HomePage() {
         <nav className="max-w-6xl mx-auto flex justify-between items-center h-full">
           <img src="/header-logo.png" alt="SlipChecker Logo" className="h-full w-auto" />
           <ul className="flex gap-6 text-sm font-medium">
-            <li><a href="#benefits" className="hover:underline text-gray-200">ประโยชน์</a></li>
+            
             <li><a href="#packages" className="hover:underline text-gray-200">แพ็กเกจ</a></li>
             <li><a href="#howto" className="hover:underline text-gray-200">วิธีใช้งาน</a></li>
-            <li><a href="#faq" className="hover:underline text-gray-200">คำถามที่พบบ่อย</a></li>
+            
             <li><a href="#contact" className="hover:underline text-gray-200">ติดต่อเรา</a></li>
-            <li><a href="/member" className="hover:underline font-semibold text-yellow-300">สมาชิก</a></li>
+            <li><a href="https://account.slip-checker.com/" className="hover:underline font-semibold text-yellow-300">สมาชิก</a></li>
           </ul>
         </nav>
       </header>
@@ -27,6 +27,14 @@ export default function HomePage() {
             <div className="p-4 bg-white rounded shadow text-blue-600 font-semibold">🔒 ปลอดภัย</div>
             <div className="p-4 bg-white rounded shadow text-blue-600 font-semibold">⚡ ตรวจสอบทันที</div>
             <div className="p-4 bg-white rounded shadow text-blue-600 font-semibold">📊 รายงานครบถ้วน</div>
+          </div>
+          <div className="mt-10">
+            <a
+              href="https://account.slip-checker.com/"
+              className="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded shadow hover:bg-blue-700 transition"
+            >
+              เริ่มต้นใช้งานฟรี
+            </a>
           </div>
         </div>
       </section>
@@ -96,6 +104,26 @@ Body:
   </div>
 </section>
 
+      {/* ✅ Section 5: ติดต่อเรา */}
+      <section id="contact" className="py-16 bg-gray-50 text-center">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-4xl font-bold text-blue-800 mb-6">ติดต่อเรา</h2>
+          <p className="text-lg text-gray-700 mb-8">
+            หากคุณมีคำถามหรือข้อสงสัย สามารถติดต่อเราได้ผ่านช่องทางด้านล่าง
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <div className="p-4 bg-white rounded shadow text-blue-600 font-semibold">
+              📧 อีเมล: <a href="mailto:support@slip-checker.com" className="text-blue-800 hover:underline">support@slip-checker.com</a>
+            </div>
+            <div className="p-4 bg-white rounded shadow text-blue-600 font-semibold">
+              📞 โทร: <a href="tel:+66930533311" className="text-blue-800 hover:underline">+66 930 533311</a>
+            </div>
+            <div className="p-4 bg-white rounded shadow text-blue-600 font-semibold">
+              🌐 เว็บไซต์: <a href="https://www.slip-checker.com" className="text-blue-800 hover:underline">www.slip-checker.com</a>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* ✅ Footer */}
       <footer className="bg-blue-800 text-white text-center py-6 mt-10">
