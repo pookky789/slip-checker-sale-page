@@ -1,20 +1,8 @@
+
+import Layout from './components/Layout';
 export default function HomePage() {
   return (
-    <div>
-      {/* ✅ Top Bar */}
-      <header className="bg-blue-800 text-white p-4 shadow-md h-16">
-        <nav className="max-w-6xl mx-auto flex justify-between items-center h-full">
-          <img src="/header-logo.png" alt="SlipChecker Logo" className="h-full w-auto" />
-          <ul className="flex gap-6 text-sm font-medium">
-            
-            <li><a href="#packages" className="hover:underline text-gray-200">แพ็กเกจ</a></li>
-            <li><a href="#howto" className="hover:underline text-gray-200">วิธีใช้งาน</a></li>
-            
-            <li><a href="#contact" className="hover:underline text-gray-200">ติดต่อเรา</a></li>
-            <li><a href="https://account.slip-checker.com/" className="hover:underline font-semibold text-yellow-300">สมาชิก</a></li>
-          </ul>
-        </nav>
-      </header>
+    <Layout>
 
       {/* ✅ Section 1: ประโยชน์ของระบบ */}
       <section id="benefits" className="py-16 bg-gray-50 text-center">
@@ -206,34 +194,63 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ✅ Section 4: การใช้งาน API ที่ง่าย */}
-      <section id="api" className="py-16 bg-gray-100 text-center">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-blue-800 mb-6">ใช้งาน API ได้ง่ายสุดๆ</h2>
-          <p className="text-lg text-gray-700 mb-8">
-            เราออกแบบ API ให้เรียบง่าย รองรับทั้งระบบ POS, เว็บ, และแอปมือถือ
-          </p>
-
-          <div className="bg-gray-600 rounded-lg p-6 text-left font-mono text-sm overflow-x-auto shadow">
-            <p className="mb-2 text-gray-400 font-semibold">🔗 ตัวอย่าง:</p>
-            <pre>
-      {`POST https://api.slipchecker.com/verify
-
-      Headers:
-        Authorization: Bearer YOUR_API_KEY
-
-      Body:
-        {
-          "imageUrl": "https://example.com/slip.jpg"
-        }`}
-            </pre>
-          </div>
-
-          <p className="mt-6 text-gray-600">
-            ตอบกลับภายใน <strong className="text-blue-600">1-2 วินาที</strong> พร้อมข้อมูลการตรวจสอบแบบละเอียด
-          </p>
+    {/* ✅ Section 4: การใช้งาน API ที่ง่าย */}
+    <section id="api" className="py-16 bg-gradient-to-b from-blue-50 to-white text-center">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-4xl font-extrabold text-blue-800 mb-6">ใช้งาน API ได้ง่ายสุดๆ</h2>
+        <p className="text-lg text-gray-700 mb-8">
+          เราออกแบบ API ให้เรียบง่าย รองรับทั้งระบบ POS, เว็บ, และแอปมือถือ
+        </p>
+    
+        <div className="bg-gray-900 rounded-lg p-6 text-left font-mono text-sm text-gray-100 overflow-x-auto shadow-lg">
+          <p className="mb-4 text-blue-400 font-semibold">🔗 ตัวอย่างการใช้งาน API:</p>
+          <pre>
+    {`POST https://api.slipchecker.com/verify
+    
+    Headers:
+      Authorization: Bearer YOUR_API_KEY
+    
+    Body:
+      {
+        "imageUrl": "https://example.com/slip.jpg"
+      }`}
+          </pre>
         </div>
-      </section>
+    
+        <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div className="p-4 bg-white rounded-lg shadow hover:shadow-xl transition">
+            <div className="text-blue-600 text-5xl mb-4">📡</div>
+            <h3 className="text-xl font-bold text-blue-700 mb-2">เชื่อมต่อ API</h3>
+            <p className="text-gray-600">
+              ใช้งานง่ายด้วยการเชื่อมต่อผ่าน HTTP POST
+            </p>
+          </div>
+          <div className="p-4 bg-white rounded-lg shadow hover:shadow-xl transition">
+            <div className="text-blue-600 text-5xl mb-4">⚙️</div>
+            <h3 className="text-xl font-bold text-blue-700 mb-2">ปรับแต่งได้</h3>
+            <p className="text-gray-600">
+              รองรับการปรับแต่งตามความต้องการของธุรกิจ
+            </p>
+          </div>
+          <div className="p-4 bg-white rounded-lg shadow hover:shadow-xl transition">
+            <div className="text-blue-600 text-5xl mb-4">📊</div>
+            <h3 className="text-xl font-bold text-blue-700 mb-2">ผลลัพธ์ที่แม่นยำ</h3>
+            <p className="text-gray-600">
+              รับผลลัพธ์ที่แม่นยำและรวดเร็วภายใน 1-2 วินาที
+            </p>
+          </div>
+        </div>
+    
+        <div className="mt-10">
+          <a
+            href="/docs"
+            className="inline-block px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition"
+          >
+            ดูเอกสาร API
+          </a>
+        </div>
+      </div>
+    </section>
 
       {/* ✅ Section 5: ติดต่อเรา */}
       <section id="contact" className="py-16 bg-gray-50 text-center">
@@ -256,10 +273,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ✅ Footer */}
-      <footer className="bg-blue-800 text-white text-center py-6 mt-10">
-        <p className="text-sm font-light">&copy; {new Date().getFullYear()} SlipChecker - All rights reserved.</p>
-      </footer>
-    </div>
+      
+
+
+      </Layout>
   );
 }
