@@ -252,26 +252,55 @@ export default function HomePage() {
       </div>
     </section>
 
-      {/* ✅ Section 5: ติดต่อเรา */}
-      <section id="contact" className="py-16 bg-gray-50 text-center">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-blue-800 mb-6">ติดต่อเรา</h2>
-          <p className="text-lg text-gray-700 mb-8">
-            หากคุณมีคำถามหรือข้อสงสัย สามารถติดต่อเราได้ผ่านช่องทางด้านล่าง
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            <div className="p-4 bg-white rounded shadow text-blue-600 font-semibold">
-              📧 อีเมล: <a href="mailto:support@slip-checker.com" className="text-blue-800 hover:underline">support@slip-checker.com</a>
-            </div>
-            <div className="p-4 bg-white rounded shadow text-blue-600 font-semibold">
-              📞 โทร: <a href="tel:+66930533311" className="text-blue-800 hover:underline">+66 930 533311</a>
-            </div>
-            <div className="p-4 bg-white rounded shadow text-blue-600 font-semibold">
-              🌐 เว็บไซต์: <a href="https://www.slip-checker.com" className="text-blue-800 hover:underline">www.slip-checker.com</a>
-            </div>
+         {/* ✅ Section 5: ติดต่อเรา */}
+    <section id="contact" className="py-16 bg-gradient-to-b from-white to-blue-50 text-center">
+      <div className="max-w-4xl mx-auto">
+        <h2 className="text-4xl font-extrabold text-blue-800 mb-6">ติดต่อเรา</h2>
+        <p className="text-lg text-gray-700 mb-10">
+          หากคุณมีคำถามหรือข้อสงสัย สามารถติดต่อเราได้ผ่านช่องทางด้านล่าง
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+          {/* Email */}
+          <div className="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition">
+            <div className="text-blue-600 text-5xl mb-4">📧</div>
+            <h3 className="text-xl font-bold text-blue-700 mb-2">อีเมล</h3>
+            <p className="text-gray-600">
+              <a href="mailto:support@slip-checker.com" className="text-blue-800 hover:underline">
+                support@slip-checker.com
+              </a>
+            </p>
+          </div>
+          {/* Phone */}
+          <div className="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition">
+            <div className="text-blue-600 text-5xl mb-4">📞</div>
+            <h3 className="text-xl font-bold text-blue-700 mb-2">โทรศัพท์</h3>
+            <p className="text-gray-600">
+              <a href="tel:+66930533311" className="text-blue-800 hover:underline">
+                +66 930 533311
+              </a>
+            </p>
+          </div>
+          {/* Website */}
+          <div className="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition">
+            <div className="text-blue-600 text-5xl mb-4">🌐</div>
+            <h3 className="text-xl font-bold text-blue-700 mb-2">เว็บไซต์</h3>
+            <p className="text-gray-600">
+              <a href="https://www.slip-checker.com" className="text-blue-800 hover:underline">
+                www.slip-checker.com
+              </a>
+            </p>
           </div>
         </div>
-      </section>
+        <div className="mt-10">
+          <a
+            href="/contact"
+            className="inline-block px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition"
+          >
+            ติดต่อเราเพิ่มเติม
+          </a>
+        </div>
+      </div>
+    </section>
 
       
 
