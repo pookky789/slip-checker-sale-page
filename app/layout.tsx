@@ -15,9 +15,16 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "SlipChecker | ระบบตรวจสอบสลิปอัตโนมัติ",
   icons: {
-    icon: "/logo.png",
-    shortcut: "/logo.png",
-    apple: "/logo.png",
+    icon: "/header-logo.png",
+    apple: "/header-logo.png",
+    shortcut: "/header-logo.png",
+    other: [
+      {
+        rel: "icon",
+        url: "/header-logo.png",
+      },
+    ]
+
   },
   description: "SlipChecker ระบบช่วยตรวจสอบสลิปอัตโนมัติ ลดการปลอมแปลง เพิ่มความปลอดภัย ใช้งานง่ายผ่าน API และหน้าเว็บ รองรับธุรกิจทุกขนาด พร้อมแพ็กเกจให้เลือกใช้งานตามความต้องการ",
 };
@@ -28,10 +35,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="icon" href="/logo.png" type="image/png" />
-      </head>
+    <html lang="th">
+      <head />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

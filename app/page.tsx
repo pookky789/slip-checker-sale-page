@@ -96,9 +96,9 @@ export default function HomePage() {
               <div className="text-blue-600 text-5xl mb-4">🚀</div>
               <h3 className="text-2xl font-bold text-blue-700 mb-2">Starter</h3>
               <p className="text-gray-600 mb-4">เหมาะสำหรับผู้เริ่มต้น</p>
-              <p className="text-3xl font-bold text-blue-600 mb-6">฿199/เดือน</p>
+              <p className="text-3xl font-bold text-blue-600 mb-6">฿100/เดือน</p>
               <ul className="text-left text-gray-600 space-y-2 mb-6">
-                <li>✅ ใช้งานได้สูงสุด 100 ครั้ง/เดือน</li>
+                <li>✅ ใช้งานได้สูงสุด 300 ครั้ง/เดือน</li>
                 <li>✅ รองรับการตรวจสอบพื้นฐาน</li>
                 <li>✅ รายงานผลแบบเรียลไทม์</li>
               </ul>
@@ -115,9 +115,9 @@ export default function HomePage() {
               <div className="text-blue-600 text-5xl mb-4">💼</div>
               <h3 className="text-2xl font-bold text-blue-700 mb-2">Pro</h3>
               <p className="text-gray-600 mb-4">สำหรับธุรกิจขนาดกลาง</p>
-              <p className="text-3xl font-bold text-blue-600 mb-6">฿499/เดือน</p>
+              <p className="text-3xl font-bold text-blue-600 mb-6">฿300/เดือน</p>
               <ul className="text-left text-gray-600 space-y-2 mb-6">
-                <li>✅ ใช้งานได้สูงสุด 500 ครั้ง/เดือน</li>
+                <li>✅ ใช้งานได้สูงสุด 1000 ครั้ง/เดือน</li>
                 <li>✅ รองรับการตรวจสอบขั้นสูง</li>
                 <li>✅ การสนับสนุนตลอด 24 ชั่วโมง</li>
               </ul>
@@ -134,9 +134,9 @@ export default function HomePage() {
               <div className="text-blue-600 text-5xl mb-4">🏢</div>
               <h3 className="text-2xl font-bold text-blue-700 mb-2">Enterprise</h3>
               <p className="text-gray-600 mb-4">รองรับระดับองค์กร</p>
-              <p className="text-3xl font-bold text-blue-600 mb-6">฿999/เดือน</p>
+              <p className="text-3xl font-bold text-blue-600 mb-6">฿500/เดือน</p>
               <ul className="text-left text-gray-600 space-y-2 mb-6">
-                <li>✅ ใช้งานได้ไม่จำกัด</li>
+                <li>✅ ใช้งานได้สูงสุด 2000 ครั้ง/เดือน</li>
                 <li>✅ การสนับสนุนเฉพาะทาง</li>
                 <li>✅ การวิเคราะห์ข้อมูลเชิงลึก</li>
               </ul>
@@ -212,7 +212,8 @@ export default function HomePage() {
     
     Body:
       {
-        "imageUrl": "https://example.com/slip.jpg"
+        "image": "https://yourdomain.com/slip.jpg",
+        "qrcode": "0041000600000101030040220015156163408CQR0789789789TH789789789"
       }`}
           </pre>
         </div>
@@ -270,13 +271,18 @@ export default function HomePage() {
               </a>
             </p>
           </div>
-          {/* Phone */}
+          {/* LINE@ */}
           <div className="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition">
-            <div className="text-blue-600 text-5xl mb-4">📞</div>
-            <h3 className="text-xl font-bold text-blue-700 mb-2">โทรศัพท์</h3>
+            <div className="text-green-500 text-5xl mb-4">💬</div>
+            <h3 className="text-xl font-bold text-blue-700 mb-2">LINE Official</h3>
             <p className="text-gray-600">
-              <a href="tel:+66930533311" className="text-blue-800 hover:underline">
-                +66 930 533311
+              <a
+                href="https://line.me/R/ti/p/@slipchecker"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-green-700 hover:underline font-semibold"
+              >
+                @slipchecker
               </a>
             </p>
           </div>
