@@ -1,4 +1,3 @@
-
 import Layout from './components/Layout';
 export default function HomePage() {
   return (
@@ -39,7 +38,7 @@ export default function HomePage() {
           </div>
           <div className="mt-10">
             <a
-              href="/signup"
+              href="https://account.slip-checker.com/register"
               className="inline-block px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition"
             >
               เริ่มต้นใช้งานฟรี
@@ -70,83 +69,100 @@ export default function HomePage() {
       {/* ✅ Section 2: แพ็กเกจ */}
       <section id="packages" className="py-16 bg-gradient-to-b from-blue-50 to-white text-center">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-extrabold text-blue-800 mb-10">เลือกแพ็กเกจที่เหมาะกับคุณ</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Free Package */}
-            <div className="border rounded-lg p-8 shadow-lg hover:shadow-xl transition bg-gray-100">
-              <div className="text-blue-600 text-5xl mb-4">🎉</div>
-              <h3 className="text-2xl font-bold text-blue-700 mb-2">Free</h3>
-              <p className="text-gray-600 mb-4">เริ่มต้นใช้งานได้ฟรี</p>
-              <p className="text-3xl font-bold text-blue-600 mb-6">฿0/เดือน</p>
-              <ul className="text-left text-gray-600 space-y-2 mb-6">
-                <li>✅ ใช้งานได้สูงสุด 10 ครั้ง/เดือน</li>
-                <li>✅ รองรับการตรวจสอบพื้นฐาน</li>
-                <li>✅ ไม่มีค่าใช้จ่าย</li>
-              </ul>
-              <a
-                href="/signup"
-                className="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded shadow hover:bg-blue-700 transition"
-              >
-                เริ่มต้นใช้งานฟรี
-              </a>
-            </div>
-
-            {/* Starter Package */}
-            <div className="border rounded-lg p-8 shadow-lg hover:shadow-xl transition bg-white">
-              <div className="text-blue-600 text-5xl mb-4">🚀</div>
-              <h3 className="text-2xl font-bold text-blue-700 mb-2">Starter</h3>
-              <p className="text-gray-600 mb-4">เหมาะสำหรับผู้เริ่มต้น</p>
-              <p className="text-3xl font-bold text-blue-600 mb-6">฿100/เดือน</p>
-              <ul className="text-left text-gray-600 space-y-2 mb-6">
-                <li>✅ ใช้งานได้สูงสุด 300 ครั้ง/เดือน</li>
-                <li>✅ รองรับการตรวจสอบพื้นฐาน</li>
-                <li>✅ รายงานผลแบบเรียลไทม์</li>
-              </ul>
-              <a
-                href="/signup"
-                className="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded shadow hover:bg-blue-700 transition"
-              >
-                เลือกแพ็กเกจ
-              </a>
-            </div>
-      
-            {/* Pro Package */}
-            <div className="border rounded-lg p-8 shadow-lg hover:shadow-xl transition bg-blue-50">
-              <div className="text-blue-600 text-5xl mb-4">💼</div>
-              <h3 className="text-2xl font-bold text-blue-700 mb-2">Pro</h3>
-              <p className="text-gray-600 mb-4">สำหรับธุรกิจขนาดกลาง</p>
-              <p className="text-3xl font-bold text-blue-600 mb-6">฿300/เดือน</p>
-              <ul className="text-left text-gray-600 space-y-2 mb-6">
-                <li>✅ ใช้งานได้สูงสุด 1000 ครั้ง/เดือน</li>
-                <li>✅ รองรับการตรวจสอบขั้นสูง</li>
-                <li>✅ การสนับสนุนตลอด 24 ชั่วโมง</li>
-              </ul>
-              <a
-                href="/signup"
-                className="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded shadow hover:bg-blue-700 transition"
-              >
-                เลือกแพ็กเกจ
-              </a>
-            </div>
-      
-            {/* Enterprise Package */}
-            <div className="border rounded-lg p-8 shadow-lg hover:shadow-xl transition bg-white">
-              <div className="text-blue-600 text-5xl mb-4">🏢</div>
-              <h3 className="text-2xl font-bold text-blue-700 mb-2">Enterprise</h3>
-              <p className="text-gray-600 mb-4">รองรับระดับองค์กร</p>
-              <p className="text-3xl font-bold text-blue-600 mb-6">฿500/เดือน</p>
-              <ul className="text-left text-gray-600 space-y-2 mb-6">
-                <li>✅ ใช้งานได้สูงสุด 2000 ครั้ง/เดือน</li>
-                <li>✅ การสนับสนุนเฉพาะทาง</li>
-                <li>✅ การวิเคราะห์ข้อมูลเชิงลึก</li>
-              </ul>
-              <a
-                href="/signup"
-                className="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded shadow hover:bg-blue-700 transition"
-              >
-                เลือกแพ็กเกจ
-              </a>
-            </div>
+          <h2 className="text-4xl font-extrabold text-blue-800 mb-10">แพ็กเกจและราคา</h2>
+          <div className="overflow-x-auto">
+            <table className="min-w-full bg-white rounded-lg shadow-lg text-left">
+              <thead>
+                <tr>
+                  <th className="px-4 py-3 border-b text-blue-700 text-lg">แพ็กเกจ</th>
+                  <th className="px-4 py-3 border-b text-blue-700 text-lg">ราคา/เดือน (บาท)</th>
+                  <th className="px-4 py-3 border-b text-blue-700 text-lg">จำนวนครั้ง/เดือน</th>
+                  <th className="px-4 py-3 border-b text-blue-700 text-lg">ราคา/เครดิต (บาท)</th>
+                </tr>
+              </thead>
+              <tbody>
+  <tr className="hover:bg-blue-50">
+    <td className="px-4 py-3 font-semibold text-gray-700 bg-gray-100 rounded-l-lg">Free</td>
+    <td className="px-4 py-3 text-blue-600 font-bold bg-gray-50">0</td>
+    <td className="px-4 py-3 text-green-700 font-bold bg-gray-50">10</td>
+    <td className="px-4 py-3 text-pink-600 font-bold bg-gray-50 rounded-r-lg">0</td>
+  </tr>
+  <tr className="hover:bg-blue-50">
+    <td className="px-4 py-3 font-semibold text-blue-900 bg-blue-100 rounded-l-lg">basic 1</td>
+    <td className="px-4 py-3 text-blue-600 font-bold bg-blue-50">49</td>
+    <td className="px-4 py-3 text-green-700 font-bold bg-blue-50">200</td>
+    <td className="px-4 py-3 text-pink-600 font-bold bg-blue-50 rounded-r-lg">0.245</td>
+  </tr>
+  <tr className="hover:bg-blue-50">
+    <td className="px-4 py-3 font-semibold text-blue-900 bg-blue-100 rounded-l-lg">basic 2</td>
+    <td className="px-4 py-3 text-blue-600 font-bold bg-blue-50">99</td>
+    <td className="px-4 py-3 text-green-700 font-bold bg-blue-50">450</td>
+    <td className="px-4 py-3 text-pink-600 font-bold bg-blue-50 rounded-r-lg">0.220</td>
+  </tr>
+  <tr className="hover:bg-blue-50">
+    <td className="px-4 py-3 font-semibold text-blue-900 bg-blue-100 rounded-l-lg">basic 3</td>
+    <td className="px-4 py-3 text-blue-600 font-bold bg-blue-50">199</td>
+    <td className="px-4 py-3 text-green-700 font-bold bg-blue-50">1,000</td>
+    <td className="px-4 py-3 text-pink-600 font-bold bg-blue-50 rounded-r-lg">0.199</td>
+  </tr>
+  <tr className="hover:bg-blue-50">
+    <td className="px-4 py-3 font-semibold text-purple-900 bg-purple-100 rounded-l-lg">standard 1</td>
+    <td className="px-4 py-3 text-blue-600 font-bold bg-purple-50">499</td>
+    <td className="px-4 py-3 text-green-700 font-bold bg-purple-50">3,000</td>
+    <td className="px-4 py-3 text-pink-600 font-bold bg-purple-50 rounded-r-lg">0.166</td>
+  </tr>
+  <tr className="hover:bg-blue-50">
+    <td className="px-4 py-3 font-semibold text-purple-900 bg-purple-100 rounded-l-lg">standard 2</td>
+    <td className="px-4 py-3 text-blue-600 font-bold bg-purple-50">699</td>
+    <td className="px-4 py-3 text-green-700 font-bold bg-purple-50">4,600</td>
+    <td className="px-4 py-3 text-pink-600 font-bold bg-purple-50 rounded-r-lg">0.152</td>
+  </tr>
+  <tr className="hover:bg-blue-50">
+    <td className="px-4 py-3 font-semibold text-purple-900 bg-purple-100 rounded-l-lg">standard 3</td>
+    <td className="px-4 py-3 text-blue-600 font-bold bg-purple-50">999</td>
+    <td className="px-4 py-3 text-green-700 font-bold bg-purple-50">7,000</td>
+    <td className="px-4 py-3 text-pink-600 font-bold bg-purple-50 rounded-r-lg">0.143</td>
+  </tr>
+  <tr className="hover:bg-blue-50">
+    <td className="px-4 py-3 font-semibold text-purple-900 bg-purple-100 rounded-l-lg">standard 4</td>
+    <td className="px-4 py-3 text-blue-600 font-bold bg-purple-50">1,499</td>
+    <td className="px-4 py-3 text-green-700 font-bold bg-purple-50">11,500</td>
+    <td className="px-4 py-3 text-pink-600 font-bold bg-purple-50 rounded-r-lg">0.130</td>
+  </tr>
+  <tr className="hover:bg-blue-50">
+    <td className="px-4 py-3 font-semibold text-yellow-900 bg-yellow-100 rounded-l-lg">premium 1</td>
+    <td className="px-4 py-3 text-blue-600 font-bold bg-yellow-50">2,999</td>
+    <td className="px-4 py-3 text-green-700 font-bold bg-yellow-50">27,000</td>
+    <td className="px-4 py-3 text-pink-600 font-bold bg-yellow-50 rounded-r-lg">0.111</td>
+  </tr>
+  <tr className="hover:bg-blue-50">
+    <td className="px-4 py-3 font-semibold text-yellow-900 bg-yellow-100 rounded-l-lg">premium 2</td>
+    <td className="px-4 py-3 text-blue-600 font-bold bg-yellow-50">4,999</td>
+    <td className="px-4 py-3 text-green-700 font-bold bg-yellow-50">51,000</td>
+    <td className="px-4 py-3 text-pink-600 font-bold bg-yellow-50 rounded-r-lg">0.098</td>
+  </tr>
+  <tr className="hover:bg-blue-50">
+    <td className="px-4 py-3 font-semibold text-yellow-900 bg-yellow-100 rounded-l-lg">premium 3</td>
+    <td className="px-4 py-3 text-blue-600 font-bold bg-yellow-50">6,999</td>
+    <td className="px-4 py-3 text-green-700 font-bold bg-yellow-50">80,000</td>
+    <td className="px-4 py-3 text-pink-600 font-bold bg-yellow-50 rounded-r-lg">0.087</td>
+  </tr>
+  <tr className="hover:bg-blue-50">
+    <td className="px-4 py-3 font-semibold text-yellow-900 bg-yellow-100 rounded-l-lg">premium 4</td>
+    <td className="px-4 py-3 text-blue-600 font-bold bg-yellow-50">9,999</td>
+    <td className="px-4 py-3 text-green-700 font-bold bg-yellow-50">120,000</td>
+    <td className="px-4 py-3 text-pink-600 font-bold bg-yellow-50 rounded-r-lg">0.083</td>
+  </tr>
+</tbody>
+            </table>
+          </div>
+          <div className="mt-8">
+            <a
+              href="https://account.slip-checker.com/register"
+              className="inline-block px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition"
+            >
+              สมัครใช้งานหรือสอบถามเพิ่มเติม
+            </a>
           </div>
         </div>
       </section>
@@ -185,7 +201,7 @@ export default function HomePage() {
           </div>
           <div className="mt-10">
             <a
-              href="/signup"
+              href="https://account.slip-checker.com/register"
               className="inline-block px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition"
             >
               เริ่มต้นใช้งานฟรี
@@ -244,7 +260,7 @@ export default function HomePage() {
     
         <div className="mt-10">
           <a
-            href="/docs"
+            href="https://account.slip-checker.com/apidocument"
             className="inline-block px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition"
           >
             ดูเอกสาร API
